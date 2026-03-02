@@ -41,7 +41,7 @@ export default function RootLayout({
           Pular para o conteúdo
         </a>
         <ScrollProgress />
-        <main id="main">
+        <main id="main" className="min-w-0 overflow-x-hidden">
         <Header />
         {children}
         </main>

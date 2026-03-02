@@ -36,12 +36,12 @@ function SkillCard({ skill }: { skill: Skill }) {
   return (
     <StaggerItem>
       <Card className="h-full flex flex-col">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="p-2 rounded-lg bg-accent/10 text-accent">
+        <div className="flex items-center gap-3 mb-4 min-h-[3rem]">
+          <div className="flex-shrink-0 p-2 rounded-lg bg-accent/10 text-accent">
             <Icon className="w-5 h-5" />
           </div>
-          <div>
-            <h3 className="font-semibold">{skill.name}</h3>
+          <div className="min-w-0 flex-1">
+            <h3 className="font-semibold text-sm md:text-base break-words leading-tight">{skill.name}</h3>
             <span className="text-xs text-muted-foreground">{skill.level}</span>
           </div>
         </div>
