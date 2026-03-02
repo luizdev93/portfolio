@@ -32,7 +32,7 @@ const ContactSection = dynamic(() =>
 
 export default function Home() {
   return (
-    <main>
+    <>
       <HeroSection />
       <AboutSection />
       <SkillsSection />
@@ -40,6 +40,6 @@ export default function Home() {
       <ExperienceSection />
       <TestimonialsSection />
       <ContactSection />
-    </main>
+    </>
   );
 }

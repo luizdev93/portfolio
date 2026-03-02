@@ -17,12 +17,14 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "py-24 md:py-32 px-4 md:px-8",
+        "py-24 md:py-32 w-full",
         alternateBg && "bg-white/[0.02]",
         className
       )}
     >
-      {children}
+      <div className="w-full px-3 sm:px-4 md:px-8">
+        {children}
+      </div>
     </section>
   );
 }

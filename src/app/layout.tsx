@@ -29,9 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased noise-overlay`}
+        suppressHydrationWarning
       >
         <a
           href="#main"

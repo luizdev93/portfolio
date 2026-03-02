@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { MagneticButton } from "@/components/shared/MagneticButton";
 import { Section } from "@/components/ui/Section";
 import { RevealOnScroll } from "@/animations/components/RevealOnScroll";
 import { projects } from "@/data/projects";
@@ -53,10 +52,8 @@ export function ProjectsSection() {
                     ))}
                   </div>
                   <span className="inline-flex items-center gap-1 text-sm text-accent font-medium group-hover:gap-2 transition-all">
-                    <MagneticButton href={project.caseStudy ?? project.link}>
-                      View Case Study
-                      <ArrowUpRight className="w-4 h-4" />
-                    </MagneticButton>
+                    View Case Study
+                    <ArrowUpRight className="w-4 h-4" />
                   </span>
                 </div>
               </Link>

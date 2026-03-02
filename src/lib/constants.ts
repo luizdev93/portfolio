@@ -3,8 +3,8 @@ export const SITE_CONFIG = {
   title: "Bubble Certified Developer",
   tagline: "API Integrations • Automation • Vibe Coding",
   email: "contato@example.com",
-  whatsapp: "+5511999999999",
-  calendly: "https://calendly.com/example",
+  whatsapp: "+5561995896222",
+  calendly: "https://calendar.app.google/9A9yHJKzcESbEw3d7",
   linkedin: "https://linkedin.com/in/example",
   github: "https://github.com/example",
 } as const;

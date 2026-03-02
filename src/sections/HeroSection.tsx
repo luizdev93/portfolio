@@ -84,7 +84,7 @@ export function HeroSection() {
         </motion.div>
       </motion.div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
