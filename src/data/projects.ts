@@ -4,6 +4,12 @@ import { aiTeller } from "./projetos/ai-teller";
 import { dashboardAnalytics } from "./projetos/dashboard-analytics";
 import { lojaBecker } from "./projetos/loja-becker";
 import { sarueUrbana } from "./projetos/sarue-urbana";
+import { sparkusEad } from "./projetos/sparkus-ead";
+import { arenaCriativa } from "./projetos/arena-criativa";
+import { appSerralheiro } from "./projetos/app-serralheiro";
+import { valeo } from "./projetos/valeo";
+import { serNissan } from "./projetos/ser-nissan";
+import { naFaixa } from "./projetos/na-faixa";
 
 // Lista de projetos: cada um está em src/data/projetos/[nome].ts
 // Imagens: coloque capa.jpg e slide-1.jpg, slide-2.jpg... em public/projetos/[slug]/
@@ -14,6 +20,12 @@ export const projects: Project[] = [
   dashboardAnalytics,
   lojaBecker,
   sarueUrbana,
+  sparkusEad,
+  arenaCriativa,
+  appSerralheiro,
+  valeo,
+  serNissan,
+  naFaixa,
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
