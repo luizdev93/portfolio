@@ -11,7 +11,7 @@ export const SITE_CONFIG = {
 
 export const NAV_LINKS = [
   { href: "#about", label: "Sobre" },
-  { href: "#skills", label: "Skills" },
+  { href: "#skills", label: "Ferramentas e Tecnologias" },
   { href: "#projects", label: "Projetos" },
   { href: "#experience", label: "Experiência" },
   { href: "#testimonials", label: "Depoimentos" },

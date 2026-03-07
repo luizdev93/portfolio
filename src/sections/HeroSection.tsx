@@ -5,10 +5,12 @@ import { Button } from "@/components/ui/Button";
 import { GradientText } from "@/components/shared/GradientText";
 import { Glow } from "@/components/shared/Glow";
 import { SITE_CONFIG } from "@/lib/constants";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { staggerContainer, staggerItem } from "@/animations/variants";
 import { transitions } from "@/animations/transitions";
 
 export function HeroSection() {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       <div
@@ -38,7 +40,7 @@ export function HeroSection() {
           transition={transitions.normal}
           className="text-accent text-sm font-medium tracking-wider uppercase mb-4"
         >
-          {SITE_CONFIG.title}
+          {t.hero.title}
         </motion.p>
 
         <motion.h1
@@ -50,7 +52,7 @@ export function HeroSection() {
             <GradientText>{SITE_CONFIG.name}</GradientText>
           </span>
           <span className="block text-foreground mt-2">
-            Desenvolvedor que transforma ideias em produtos.
+            {t.hero.subtitle}
           </span>
         </motion.h1>
 
@@ -59,7 +61,7 @@ export function HeroSection() {
           transition={transitions.normal}
           className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto"
         >
-          {SITE_CONFIG.tagline}
+          {t.hero.tagline}
         </motion.p>
 
         <motion.p
@@ -67,7 +69,7 @@ export function HeroSection() {
           transition={transitions.normal}
           className="text-sm text-muted-foreground/80 mb-12"
         >
-          Trusted by 10+ clients
+          {t.hero.trusted}
         </motion.p>
 
         <motion.div
@@ -76,10 +78,10 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button href="#contact" size="lg">
-            Vamos conversar
+            {t.hero.ctaPrimary}
           </Button>
           <Button href="#projects" variant="secondary" size="lg">
-            Ver projetos
+            {t.hero.ctaSecondary}
           </Button>
         </motion.div>
       </motion.div>

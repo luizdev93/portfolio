@@ -3,16 +3,18 @@
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { RevealOnScroll } from "@/animations/components/RevealOnScroll";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { testimonials } from "@/data/testimonials";
 
 export function TestimonialsSection() {
+  const { t } = useLanguage();
   return (
     <Section id="testimonials">
       <div className="max-w-[1200px] mx-auto">
         <RevealOnScroll>
-          <h2 className="font-display text-h1 font-semibold mb-4">Depoimentos</h2>
+          <h2 className="font-display text-h1 font-semibold mb-4">{t.testimonials.title}</h2>
           <p className="text-muted-foreground mb-12 max-w-2xl">
-            O que clientes dizem sobre o trabalho entregue.
+            {t.testimonials.description}
           </p>
         </RevealOnScroll>
 

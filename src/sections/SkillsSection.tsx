@@ -5,27 +5,40 @@ import {
   Workflow,
   Zap,
   Code2,
-  Bot,
   GitBranch,
-  Puzzle,
-  Database,
   Sparkles,
+  Layout,
+  Smartphone,
+  Mail,
+  CreditCard,
+  FileText,
+  Palette,
+  Video,
+  Package,
+  Globe,
 } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { StaggerChildren, StaggerItem } from "@/animations/components/StaggerChildren";
 import { skills } from "@/data/skills";
 import type { Skill } from "@/types";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   bubble: Workflow,
   api: Code2,
-  zapier: Zap,
+  zap: Zap,
   cursor: Sparkles,
-  automation: Bot,
-  workflow: GitBranch,
-  plugin: Puzzle,
-  database: Database,
+  layout: Layout,
+  smartphone: Smartphone,
+  mail: Mail,
+  creditcard: CreditCard,
+  github: GitBranch,
+  filetext: FileText,
+  figma: Palette,
+  video: Video,
+  package: Package,
+  globe: Globe,
 };
 
 function SkillCard({ skill }: { skill: Skill }) {
@@ -62,14 +75,15 @@ function SkillCard({ skill }: { skill: Skill }) {
 }
 
 export function SkillsSection() {
+  const { t } = useLanguage();
   return (
     <Section id="skills" alternateBg>
       <div className="max-w-[1200px] mx-auto">
         <StaggerChildren>
           <StaggerItem>
-            <h2 className="font-display text-h1 font-semibold mb-4">Skills</h2>
+            <h2 className="font-display text-h1 font-semibold mb-4">{t.skills.title}</h2>
             <p className="text-muted-foreground mb-12 max-w-2xl">
-              Ferramentas e tecnologias que domino para entregar projetos de alta qualidade.
+              {t.skills.description}
             </p>
           </StaggerItem>
         </StaggerChildren>

@@ -5,16 +5,18 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { RevealOnScroll } from "@/animations/components/RevealOnScroll";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { projects } from "@/data/projects";
 
 export function ProjectsSection() {
+  const { t } = useLanguage();
   return (
     <Section id="projects">
       <div className="max-w-[1200px] mx-auto">
         <RevealOnScroll>
-          <h2 className="font-display text-h1 font-semibold mb-4">Projetos</h2>
+          <h2 className="font-display text-h1 font-semibold mb-4">{t.projects.title}</h2>
           <p className="text-muted-foreground mb-12 max-w-2xl">
-            Seleção de trabalhos que demonstram expertise em Bubble, APIs e automações.
+            {t.projects.description}
           </p>
         </RevealOnScroll>
 
@@ -52,7 +54,7 @@ export function ProjectsSection() {
                     ))}
                   </div>
                   <span className="inline-flex items-center gap-1 text-xs text-accent font-medium group-hover:gap-2 transition-all">
-                    View Case Study
+                    {t.projects.viewDetails}
                     <ArrowUpRight className="w-4 h-4" />
                   </span>
                 </div>

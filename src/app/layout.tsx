@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
+import { SkipLink } from "@/components/layout/SkipLink";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,18 +36,15 @@ export default function RootLayout({
         className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased noise-overlay`}
         suppressHydrationWarning
       >
-        <a
-          href="#main"
-          className="skip-link"
-        >
-          Pular para o conteúdo
-        </a>
-        <ScrollProgress />
-        <main id="main" className="min-w-0 overflow-x-hidden">
-        <Header />
-        {children}
-        </main>
-        <Footer />
+        <LanguageProvider>
+          <SkipLink />
+          <ScrollProgress />
+          <main id="main" className="min-w-0 overflow-x-hidden">
+            <Header />
+            {children}
+          </main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

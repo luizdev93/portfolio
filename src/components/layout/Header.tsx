@@ -5,8 +5,13 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { NAV_LINKS } from "@/lib/constants";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSelector } from "@/components/ui/LanguageSelector";
+
+const NAV_KEYS = ["about", "skills", "projects", "experience", "testimonials", "contact"] as const;
 
 export function Header() {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -17,6 +22,15 @@ export function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLabels = {
+    about: t.nav.about,
+    skills: t.nav.skills,
+    projects: t.nav.projects,
+    experience: t.nav.experience,
+    testimonials: t.nav.testimonials,
+    contact: t.nav.contact,
+  };
 
   return (
     <header
@@ -33,40 +47,46 @@ export function Header() {
           Luiz
         </Link>
 
-        <ul className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-6">
+          <ul className="flex items-center gap-8">
+            {NAV_LINKS.map((link, i) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {navLabels[NAV_KEYS[i]]}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <LanguageSelector />
+        </div>
 
-        <button
-          type="button"
-          className="md:hidden p-2 text-foreground"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex md:hidden items-center gap-2">
+          <LanguageSelector />
+          <button
+            type="button"
+            className="p-2 text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? t.footer.menuClose : t.footer.menuOpen}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {isMobileMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-white/5 py-4 px-4">
           <ul className="flex flex-col gap-4">
-            {NAV_LINKS.map((link) => (
+            {NAV_LINKS.map((link, i) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   className="block text-muted-foreground hover:text-foreground transition-colors py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {link.label}
+                  {navLabels[NAV_KEYS[i]]}
                 </Link>
               </li>
             ))}
