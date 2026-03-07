@@ -1,8 +1,11 @@
 export interface Project {
   id: string;
+  slug: string;
   title: string;
   description: string;
   image: string;
+  images?: string[];
+  longDescription?: string;
   tags: readonly string[];
   link: string;
   caseStudy?: string;

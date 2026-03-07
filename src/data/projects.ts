@@ -1,34 +1,21 @@
 import type { Project } from "@/types";
+import { linkai } from "./projetos/linkai";
+import { aiTeller } from "./projetos/ai-teller";
+import { dashboardAnalytics } from "./projetos/dashboard-analytics";
+import { lojaBecker } from "./projetos/loja-becker";
+import { sarueUrbana } from "./projetos/sarue-urbana";
+
+// Lista de projetos: cada um está em src/data/projetos/[nome].ts
+// Imagens: coloque capa.jpg e slide-1.jpg, slide-2.jpg... em public/projetos/[slug]/
 
 export const projects: Project[] = [
-  {
-    id: "1",
-    title: "Plataforma SaaS Completa",
-    description:
-      "Sistema de gestão integrado com pagamentos, dashboards e automações. Redução de 60% no tempo operacional.",
-    image: "https://placehold.co/600x400/0a0a0a/22d3ee?text=Projeto+1",
-    tags: ["Bubble.io", "Stripe", "Zapier"],
-    link: "#",
-    caseStudy: "#",
-  },
-  {
-    id: "2",
-    title: "Marketplace B2B",
-    description:
-      "Plataforma de marketplace conectando fornecedores e compradores. +200 usuários ativos em 3 meses.",
-    image: "https://placehold.co/600x400/0a0a0a/22d3ee?text=Projeto+2",
-    tags: ["Bubble.io", "API REST", "Make"],
-    link: "#",
-    caseStudy: "#",
-  },
-  {
-    id: "3",
-    title: "Dashboard de Analytics",
-    description:
-      "Painel interativo com integrações de múltiplas fontes de dados e relatórios em tempo real.",
-    image: "https://placehold.co/600x400/0a0a0a/22d3ee?text=Projeto+3",
-    tags: ["Bubble.io", "Google Sheets", "Charts"],
-    link: "#",
-    caseStudy: "#",
-  },
+  linkai,
+  aiTeller,
+  dashboardAnalytics,
+  lojaBecker,
+  sarueUrbana,
 ];
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((p) => p.slug === slug);
+}
