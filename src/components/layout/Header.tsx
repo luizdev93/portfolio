@@ -8,7 +8,7 @@ import { NAV_LINKS } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { LanguageSelector } from "@/components/ui/LanguageSelector";
 
-const NAV_KEYS = ["about", "skills", "projects", "experience", "testimonials", "contact"] as const;
+const NAV_KEYS = ["skills", "projects", "testimonials", "about", "contact"] as const;
 
 export function Header() {
   const { t } = useLanguage();
@@ -27,7 +27,6 @@ export function Header() {
     about: t.nav.about,
     skills: t.nav.skills,
     projects: t.nav.projects,
-    experience: t.nav.experience,
     testimonials: t.nav.testimonials,
     contact: t.nav.contact,
   };

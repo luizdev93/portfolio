@@ -16,7 +16,10 @@ import {
   Video,
   Package,
   Globe,
+  Database,
+  Flame,
 } from "lucide-react";
+import { cn } from "@/lib/cn";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { StaggerChildren, StaggerItem } from "@/animations/components/StaggerChildren";
@@ -39,23 +42,45 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   video: Video,
   package: Package,
   globe: Globe,
+  database: Database,
+  flame: Flame,
+  code: Code2,
 };
 
 function SkillCard({ skill }: { skill: Skill }) {
   const Icon = iconMap[skill.icon] ?? Code2;
   const levelPercent =
     skill.level === "Expert" ? 90 : skill.level === "Advanced" ? 75 : 60;
+  const isBubble = skill.name === "Bubble.io";
 
   return (
     <StaggerItem>
-      <Card className="h-full flex flex-col">
+      <Card
+        className={cn(
+          "h-full flex flex-col",
+          isBubble && "border-accent/50 ring-2 ring-accent/20 bg-accent/5 shadow-lg shadow-accent/10"
+        )}
+      >
         <div className="flex items-center gap-3 mb-4 min-h-[3rem]">
-          <div className="flex-shrink-0 p-2 rounded-lg bg-accent/10 text-accent">
+          <div
+            className={cn(
+              "flex-shrink-0 p-2 rounded-lg text-accent",
+              isBubble ? "bg-accent/20" : "bg-accent/10"
+            )}
+          >
             <Icon className="w-5 h-5" />
           </div>
           <div className="min-w-0 flex-1">
-            <h3 className="font-semibold text-sm md:text-base break-words leading-tight">{skill.name}</h3>
-            <span className="text-xs text-muted-foreground">{skill.level}</span>
+            <h3 className="font-semibold text-sm md:text-base break-words leading-tight">
+              {skill.name}
+            </h3>
+            {isBubble ? (
+              <span className="text-xs font-medium text-accent">
+                Certified Developer
+              </span>
+            ) : (
+              <span className="text-xs text-muted-foreground">{skill.level}</span>
+            )}
           </div>
         </div>
         <div className="mt-auto">

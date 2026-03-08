@@ -6,10 +6,11 @@ import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { RevealOnScroll } from "@/animations/components/RevealOnScroll";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getProjectDescription } from "@/types";
 import { projects } from "@/data/projects";
 
 export function ProjectsSection() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   return (
     <Section id="projects">
       <div className="max-w-[1200px] mx-auto">
@@ -41,7 +42,7 @@ export function ProjectsSection() {
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground text-xs mb-3 line-clamp-2">
-                    {project.description}
+                    {getProjectDescription(project, locale)}
                   </p>
                   <div className="flex flex-wrap gap-1.5 mb-3">
                     {project.tags.map((tag) => (

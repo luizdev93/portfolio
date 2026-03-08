@@ -16,18 +16,18 @@ import { solarStart } from "./projetos/solar-start";
 // Imagens: coloque capa.jpg e slide-1.jpg, slide-2.jpg... em public/projetos/[slug]/
 
 export const projects: Project[] = [
-  linkai,
-  aiTeller,
-  dashboardAnalytics,
-  lojaBecker,
-  sarueUrbana,
-  sparkusEad,
-  arenaCriativa,
-  appSerralheiro,
-  valeo,
-  serNissan,
-  naFaixa,
-  solarStart,
+  aiTeller, // AI Teller
+  appSerralheiro, // APP Serralheiro
+  arenaCriativa, // Arena Criativa
+  dashboardAnalytics, // AureaPars
+  linkai, // LinkAi
+  lojaBecker, // Loja Becker
+  naFaixa, // NaFaixa
+  serNissan, // Placar de Performance SERNISSAN
+  sarueUrbana, // Saruê Urbana
+  solarStart, // Solar Start
+  sparkusEad, // Sparkus EAD
+  valeo, // Valeo CRM
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {

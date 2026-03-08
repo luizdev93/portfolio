@@ -23,15 +23,19 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 function getInitialLocale(): Locale {
-  if (typeof window === "undefined") return "pt";
+  if (typeof window === "undefined") return "en";
   const stored = localStorage.getItem(STORAGE_KEY) as Locale | null;
   if (stored && (stored === "pt" || stored === "en" || stored === "es"))
     return stored;
-  return "pt";
+  const browser = navigator.language || navigator.languages?.[0] || "en";
+  const lang = browser.toLowerCase().split("-")[0];
+  if (lang === "pt") return "pt";
+  if (lang === "es") return "es";
+  return "en";
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("pt");
+  const [locale, setLocaleState] = useState<Locale>("en");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

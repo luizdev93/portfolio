@@ -14,11 +14,6 @@ const ProjectsSection = dynamic(() =>
     default: mod.ProjectsSection,
   }))
 );
-const ExperienceSection = dynamic(() =>
-  import("@/sections/ExperienceSection").then((mod) => ({
-    default: mod.ExperienceSection,
-  }))
-);
 const TestimonialsSection = dynamic(() =>
   import("@/sections/TestimonialsSection").then((mod) => ({
     default: mod.TestimonialsSection,
@@ -34,11 +29,10 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <AboutSection />
       <SkillsSection />
       <ProjectsSection />
-      <ExperienceSection />
       <TestimonialsSection />
+      <AboutSection />
       <ContactSection />
     </>
   );

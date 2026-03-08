@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { RevealOnScroll } from "@/animations/components/RevealOnScroll";
@@ -25,9 +26,22 @@ export function TestimonialsSection() {
                 <blockquote className="flex-1 text-muted-foreground italic mb-6">
                   &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
-                <div>
-                  <p className="font-semibold">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                <div className="flex items-center gap-4">
+                  {testimonial.image ? (
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/10">
+                      <Image
+                        src={testimonial.image}
+                        alt={testimonial.author}
+                        fill
+                        className="object-cover"
+                        sizes="48px"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="min-w-0">
+                    <p className="font-semibold">{testimonial.author}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  </div>
                 </div>
               </Card>
             </RevealOnScroll>

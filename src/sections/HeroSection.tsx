@@ -35,14 +35,6 @@ export function HeroSection() {
         variants={staggerContainer}
         className="relative max-w-[1200px] mx-auto px-4 md:px-8 text-center z-10"
       >
-        <motion.p
-          variants={staggerItem}
-          transition={transitions.normal}
-          className="text-accent text-sm font-medium tracking-wider uppercase mb-4"
-        >
-          {t.hero.title}
-        </motion.p>
-
         <motion.h1
           variants={staggerItem}
           transition={transitions.normal}
@@ -75,26 +67,26 @@ export function HeroSection() {
         <motion.div
           variants={staggerItem}
           transition={transitions.normal}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col items-center gap-4"
         >
-          <Button href="#contact" size="lg">
-            {t.hero.ctaPrimary}
-          </Button>
-          <Button href="#projects" variant="secondary" size="lg">
-            {t.hero.ctaSecondary}
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button href="#contact" size="lg">
+              {t.hero.ctaPrimary}
+            </Button>
+            <Button href="#projects" variant="secondary" size="lg">
+              {t.hero.ctaSecondary}
+            </Button>
+          </div>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2 mt-8 shrink-0"
+            aria-hidden
+          >
+            <motion.div className="w-1.5 h-1.5 rounded-full bg-accent" />
+          </motion.div>
         </motion.div>
       </motion.div>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2"
-        >
-          <motion.div className="w-1.5 h-1.5 rounded-full bg-accent" />
-        </motion.div>
-      </div>
     </section>
   );
 }

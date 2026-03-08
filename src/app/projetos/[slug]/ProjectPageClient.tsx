@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import type { Project } from "@/types";
+import { getProjectLongDescription } from "@/types";
 import { ProjectSlider } from "@/components/shared/ProjectSlider";
 import { Button } from "@/components/ui/Button";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -13,7 +14,7 @@ interface ProjectPageClientProps {
 }
 
 export function ProjectPageClient({ project, images }: ProjectPageClientProps) {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <main className="min-h-screen pt-20 pb-24">
@@ -54,7 +55,7 @@ export function ProjectPageClient({ project, images }: ProjectPageClientProps) {
             </div>
             <div className="space-y-4 text-muted-foreground text-body leading-relaxed mb-8">
               <p>
-                {project.longDescription ?? project.description}
+                {getProjectLongDescription(project, locale)}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">

@@ -19,8 +19,8 @@ export const translations = {
     },
     hero: {
       title: "Bubble Certified Developer",
-      tagline: "API Integrations • Automation • Vibe Coding",
-      subtitle: "Desenvolvedor que transforma ideias em produtos.",
+tagline: "Integrações de API • Automação • Vibe Coding • No Code",
+    subtitle: "Desenvolvedor que transforma ideias em produtos.",
       trusted: "Confiado por mais de 10 clientes",
       ctaPrimary: "Vamos conversar",
       ctaSecondary: "Ver projetos",
@@ -29,11 +29,11 @@ export const translations = {
       title: "Sobre mim",
       alt: "Luiz - Desenvolvedor Bubble.io",
       paragraph1:
-        "Com mais de 2 anos de experiência em Bubble.io e certificação oficial, especializo-me em transformar ideias em produtos funcionais. Meu trabalho combina a velocidade do no-code com a robustez de integrações de API bem arquitetadas.",
+        "Desenvolvo com Vibe Coding: uso Cursor AI e IA como ferramenta principal para construir plataformas de forma ágil, sem perder qualidade. Ao mesmo tempo, tenho mais de 2 anos de experiência em Bubble.io e certificação oficial — domínio completo do no-code para CRMs, EAD, e-commerce, marketplaces, landing pages e apps.",
       paragraph2:
-        "Integro REST, GraphQL, Zapier, Make e APIs customizadas para criar fluxos que automatizam processos e conectam sistemas. Utilizo Cursor AI e Vibe Coding para acelerar o desenvolvimento sem sacrificar qualidade.",
+        "O Bubble.io é onde materializo a maior parte dos projetos: integrações com Stripe, APIs de pagamento e entrega, automações com n8n, e quando o cliente precisa de mais, combino com Supabase, Xano, Firebase e código customizado. Também desenvolvo identidade visual e painéis administrativos completos.",
       paragraph3:
-        "Acredito que a melhor ferramenta é aquela que resolve o problema do cliente. Bubble.io é minha base, mas não meu limite — quando precisar de mais, integro, automatizo e entrego.",
+        "Já trabalhei em projetos como o CRM da Nissan para concessionárias na América Latina, plataformas EAD, lojas online e apps para criadores de conteúdo. Vibe Code para iterar rápido; Bubble.io para entregar no-code que escala. Quando o cliente precisa de mais, integro, automatizo e entrego.",
     },
     projects: {
       title: "Projetos",
@@ -57,9 +57,24 @@ export const translations = {
     contact: {
       title: "Vamos construir algo?",
       description:
-        "Pronto para transformar sua ideia em produto. Entre em contato e vamos conversar sobre seu projeto.",
+        "Pronto para transformar sua ideia em produto. Conte sobre seu projeto abaixo para eu poder elaborar melhor a resposta.",
       ctaCalendar: "Agendar conversa",
       ctaWhatsApp: "WhatsApp",
+      ctaEmail: "Enviar por email",
+      form: {
+        name: "Nome",
+        namePlaceholder: "Seu nome",
+        email: "Email",
+        emailPlaceholder: "seu@email.com",
+        projectType: "Tipo de projeto",
+        projectTypeApp: "App",
+        projectTypeSite: "Site",
+        projectTypeApi: "API / Integração",
+        projectTypeAutomation: "Automação",
+        projectTypeOther: "Outro",
+        description: "Descreva seu projeto",
+        descriptionPlaceholder: "O que você precisa? Objetivo, funcionalidades principais, referências...",
+      },
     },
     footer: {
       rights: "Todos os direitos reservados",
@@ -85,8 +100,8 @@ export const translations = {
     },
     hero: {
       title: "Bubble Certified Developer",
-      tagline: "API Integrations • Automation • Vibe Coding",
-      subtitle: "Developer who turns ideas into products.",
+tagline: "API Integrations • Automation • Vibe Coding • No Code",
+    subtitle: "Developer who turns ideas into products.",
       trusted: "Trusted by 10+ clients",
       ctaPrimary: "Let's talk",
       ctaSecondary: "View projects",
@@ -95,11 +110,11 @@ export const translations = {
       title: "About me",
       alt: "Luiz - Bubble.io Developer",
       paragraph1:
-        "With over 2 years of experience in Bubble.io and official certification, I specialize in turning ideas into functional products. My work combines the speed of no-code with the robustness of well-architected API integrations.",
+        "I develop with Vibe Coding: Cursor AI and AI as my main tools to build platforms quickly without sacrificing quality. At the same time, I have over 2 years of experience in Bubble.io and official certification — full command of no-code for CRMs, e-learning, e-commerce, marketplaces, landing pages and apps.",
       paragraph2:
-        "I integrate REST, GraphQL, Zapier, Make and custom APIs to create flows that automate processes and connect systems. I use Cursor AI and Vibe Coding to speed up development without sacrificing quality.",
+        "Bubble.io is where most projects take shape: integrations with Stripe, payment and delivery APIs, automations with n8n, and when the client needs more, I combine it with Supabase, Xano, Firebase and custom code. I also develop visual identity and complete admin panels.",
       paragraph3:
-        "I believe the best tool is the one that solves the client's problem. Bubble.io is my base, but not my limit — when you need more, I integrate, automate and deliver.",
+        "I've worked on projects like the Nissan CRM for dealerships in Latin America, e-learning platforms, online stores and apps for content creators. Vibe Code to iterate fast; Bubble.io to deliver no-code that scales. When the client needs more, I integrate, automate and deliver.",
     },
     projects: {
       title: "Projects",
@@ -123,9 +138,24 @@ export const translations = {
     contact: {
       title: "Let's build something?",
       description:
-        "Ready to turn your idea into a product. Get in touch and let's talk about your project.",
+        "Ready to turn your idea into a product. Tell me about your project below so I can prepare a better response.",
       ctaCalendar: "Schedule a call",
       ctaWhatsApp: "WhatsApp",
+      ctaEmail: "Send by email",
+      form: {
+        name: "Name",
+        namePlaceholder: "Your name",
+        email: "Email",
+        emailPlaceholder: "you@email.com",
+        projectType: "Project type",
+        projectTypeApp: "App",
+        projectTypeSite: "Website",
+        projectTypeApi: "API / Integration",
+        projectTypeAutomation: "Automation",
+        projectTypeOther: "Other",
+        description: "Describe your project",
+        descriptionPlaceholder: "What do you need? Goal, main features, references...",
+      },
     },
     footer: {
       rights: "All rights reserved",
@@ -151,8 +181,8 @@ export const translations = {
     },
     hero: {
       title: "Bubble Certified Developer",
-      tagline: "API Integrations • Automation • Vibe Coding",
-      subtitle: "Desarrollador que transforma ideas en productos.",
+tagline: "Integraciones de API • Automatización • Vibe Coding • No Code",
+    subtitle: "Desarrollador que transforma ideas en productos.",
       trusted: "Con la confianza de más de 10 clientes",
       ctaPrimary: "Hablemos",
       ctaSecondary: "Ver proyectos",
@@ -161,11 +191,11 @@ export const translations = {
       title: "Sobre mí",
       alt: "Luiz - Desarrollador Bubble.io",
       paragraph1:
-        "Con más de 2 años de experiencia en Bubble.io y certificación oficial, me especializo en transformar ideas en productos funcionales. Mi trabajo combina la velocidad del no-code con la solidez de integraciones de API bien diseñadas.",
+        "Desarrollo con Vibe Coding: uso Cursor AI e IA como herramienta principal para construir plataformas de forma ágil, sin perder calidad. Al mismo tiempo, tengo más de 2 años de experiencia en Bubble.io y certificación oficial — dominio completo del no-code para CRMs, EAD, e-commerce, marketplaces, landing pages y apps.",
       paragraph2:
-        "Integro REST, GraphQL, Zapier, Make y APIs personalizadas para crear flujos que automatizan procesos y conectan sistemas. Uso Cursor AI y Vibe Coding para acelerar el desarrollo sin sacrificar calidad.",
+        "Bubble.io es donde materializo la mayor parte de los proyectos: integraciones con Stripe, APIs de pago y entrega, automatizaciones con n8n, y cuando el cliente necesita más, combino con Supabase, Xano, Firebase y código personalizado. También desarrollo identidad visual y paneles administrativos completos.",
       paragraph3:
-        "Creo que la mejor herramienta es la que resuelve el problema del cliente. Bubble.io es mi base, pero no mi límite — cuando necesites más, integro, automatizo y entrego.",
+        "He trabajado en proyectos como el CRM de Nissan para concesionarias en América Latina, plataformas EAD, tiendas online y apps para creadores de contenido. Vibe Code para iterar rápido; Bubble.io para entregar no-code que escala. Cuando el cliente necesita más, integro, automatizo y entrego.",
     },
     projects: {
       title: "Proyectos",
@@ -189,9 +219,24 @@ export const translations = {
     contact: {
       title: "¿Construimos algo?",
       description:
-        "Listo para transformar tu idea en producto. Contáctame y hablemos de tu proyecto.",
+        "Listo para transformar tu idea en producto. Cuéntame sobre tu proyecto abajo para poder elaborar mejor la respuesta.",
       ctaCalendar: "Agendar conversación",
       ctaWhatsApp: "WhatsApp",
+      ctaEmail: "Enviar por correo",
+      form: {
+        name: "Nombre",
+        namePlaceholder: "Tu nombre",
+        email: "Email",
+        emailPlaceholder: "tu@email.com",
+        projectType: "Tipo de proyecto",
+        projectTypeApp: "App",
+        projectTypeSite: "Sitio web",
+        projectTypeApi: "API / Integración",
+        projectTypeAutomation: "Automatización",
+        projectTypeOther: "Otro",
+        description: "Describe tu proyecto",
+        descriptionPlaceholder: "¿Qué necesitas? Objetivo, funcionalidades principales, referencias...",
+      },
     },
     footer: {
       rights: "Todos los derechos reservados",
